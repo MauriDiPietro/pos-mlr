@@ -32,6 +32,10 @@ app.use(cors({origin: whiteList}));
 app.use('/sales', routesSales)
 app.use('/products', routesProducts)
 
+app.get('/', (req, res) => {
+  res.send('server up')
+});
+
 const PORT = process.env.PORT || 8080
 
 app.listen(PORT, ()=>{
