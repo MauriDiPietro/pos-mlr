@@ -32,7 +32,8 @@ app.use(cors({origin: whiteList}));
 app.use('/sales', routesSales)
 app.use('/products', routesProducts)
 
+const PORT = process.env.PORT || 8080
 
-app.listen(process.env.PORT, ()=>{
-    console.log(`Server OK PORT=${process.env.PORT}`)
+app.listen(PORT, ()=>{
+    console.log(`Server OK PORT=${PORT}`)
 })
